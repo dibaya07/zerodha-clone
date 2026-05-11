@@ -279,3 +279,19 @@ span a {
     font-size: 1.5rem;
   }
 }
+
+
+
+
+.btns{
+  margin: auto auto;
+  background-color: rgb(6, 6, 226);
+  color: white;
+  text-decoration: none;
+  width: 20%;
+  border-radius: 6px;
+}
+
+.btns:hover {
+   background-color: rgb(40, 40, 243);
+}

@@ -12,7 +12,7 @@ import { toast } from "react-toastify";
 import {GeneralContext} from "../../Context/context";
 
 export default function HomePage() {
-  const {setUsername,removeCookie, cookies, setIsAuthorized} = useContext(GeneralContext)
+  const {setUsername,removeCookie, cookies, setIsAuthorized, isAuthorized} = useContext(GeneralContext)
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function HomePage() {
         navigate("/login");
       }
       const { data } = await axios.post(
-        "http://localhost:3002",
+        import.meta.env.VITE_BACKEND_URL, 
         {},
         { withCredentials: true }
       );
@@ -53,7 +53,8 @@ export default function HomePage() {
     <Stats/>
     <Pricing/>
     <Education/>
-    <OpenAccount/>
+    {!isAuthorized && 
+    <OpenAccount/>}
     </>
   )
 }

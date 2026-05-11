@@ -1,10 +1,10 @@
-import HomePage from "./landing_page/home/HomePage";
+// import HomePage from "./landing_page/home/HomePage";
 
-export default function App() {
+// export default function App() {
 
-  return (
-    <>
-    <HomePage/>
-    </>
-  )
-}
+//   return (
+//     <>
+//     <HomePage/>
+//     </>
+//   )
+// }

@@ -11,11 +11,12 @@ import SupportPage from './landing_page/support/SupportPage'
 import NotFound from './landing_page/NotFound'
 import Login from './landing_page/login/Login'
 import { CookiesProvider } from 'react-cookie'
-import App from './App'
+// import App from './App'
 import Navbar from './landing_page/Navbar'
 import Footer from './landing_page/Footer'
 // import { GeneralContext } from './Context/context'
 import { GeneralContextProvider } from './Context/GeneralContext'
+import HomePage from './landing_page/home/HomePage'
 // import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
@@ -27,7 +28,7 @@ createRoot(document.getElementById('root')).render(
     {/* <App/> */}
       <Navbar />
       <Routes>
-        <Route path='/' element={<App/> } />
+        <Route path='/' element={<HomePage/> } />
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
         <Route path='/about' element={<AboutPage />} />

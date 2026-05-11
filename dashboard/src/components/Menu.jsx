@@ -27,7 +27,7 @@ export default function Menu() {
           <li>
             <Link
               style={{ textDecoration: "none" }}
-              to="http://localhost:5173/"
+              to={import.meta.env.VITE_FRONTEND_URL}
             >
               <p className={ menuClass}>
                 Home

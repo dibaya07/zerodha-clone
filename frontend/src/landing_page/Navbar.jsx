@@ -27,7 +27,7 @@ export default function Navbar() {
              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               
              {isAuthorized && <li className="nav-item">
-                <Link className="nav-link active" to='http://localhost:5174/'>
+                <Link className="nav-link active" to={import.meta.env.VITE_DASHBOARD_URL}>
                   Dashboard
                 </Link>
               </li>}

@@ -1,6 +1,11 @@
-import React from 'react'
+import { useContext } from "react"
+import { GeneralContext } from "../../Context/context"
+import {Link} from "react-router-dom"
+
+
 
 export default function Hero() {
+  const {isAuthorized} = useContext(GeneralContext)
   return (
     <div className='container p-5 mb-5'>
       <div className="row text-center">
@@ -11,7 +16,11 @@ export default function Hero() {
         <p>
         Online platform to invest in stocks, derivatives, mutual funds, ETFs, bonds, and more.
         </p>
-        <button className='p-2 btn btn-primary fs-5 mb-5' style={{width:"20%", margin:"0 auto"}}>Sign up Now</button>
+        {!isAuthorized && 
+         <Link className='p-2  btns fs-5 mb-5 ' aria-current="page" to='/signup' >
+                  Sign Up Now
+                </Link>}
+        {/* <button className='p-2 btn btn-primary fs-5 mb-5' style={{width:"20%", margin:"0 auto"}}>Sign up Now</button>  */}
       </div>
       
     </div>

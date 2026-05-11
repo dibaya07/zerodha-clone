@@ -33,8 +33,8 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post(
-        "http://localhost:3002/signup",
+      const { data } = await axios.post(`${ import.meta.env.VITE_BACKEND_URL}/signup`
+        ,
         {
           ...inputValue,
         },
