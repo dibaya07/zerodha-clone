@@ -6,7 +6,6 @@ import Education from './Education'
 import OpenAccount from '../OpenAccount'
 import { useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-// import { useCookies } from "react-cookie";
 import axios from "axios";
 import { toast } from "react-toastify";
 import {GeneralContext} from "../../Context/context";
@@ -17,10 +16,10 @@ export default function HomePage() {
 
   useEffect(() => {
     const verifyCookie = async () => {
-      if (!cookies.token) {
-        console.log("hello")
-        navigate("/login");
-      }
+      // if (!cookies.token) {
+      //   console.log("hello")
+      //   navigate("/login");
+      // }
       const { data } = await axios.post(
         import.meta.env.VITE_BACKEND_URL, 
         {},

@@ -11,13 +11,10 @@ import SupportPage from './landing_page/support/SupportPage'
 import NotFound from './landing_page/NotFound'
 import Login from './landing_page/login/Login'
 import { CookiesProvider } from 'react-cookie'
-// import App from './App'
 import Navbar from './landing_page/Navbar'
 import Footer from './landing_page/Footer'
-// import { GeneralContext } from './Context/context'
 import { GeneralContextProvider } from './Context/GeneralContext'
 import HomePage from './landing_page/home/HomePage'
-// import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
