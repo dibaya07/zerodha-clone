@@ -23,8 +23,8 @@ export default function Navbar() {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             
-            <form className="d-flex" role="search">
-             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            {/* <div className="" role="search"> */}
+             <ul className="d-flex navbar-nav me-auto mb-2 mb-lg-0">
               
              {isAuthorized && <li className="nav-item">
                 <Link className="nav-link active" to={import.meta.env.VITE_DASHBOARD_URL}>
@@ -53,7 +53,7 @@ export default function Navbar() {
               </li>
              {isAuthorized && <li className="nav-item nav-link" style={{textTransform:"capitalize"}}>
                 {/* <Link className="nav-link active" to='/support'> */}
-                  {username} 
+                  hello {username}
                 {/* </Link> */}
               </li>}
               {!isAuthorized && <li className="nav-item">
@@ -75,7 +75,7 @@ export default function Navbar() {
              
               
             </ul>
-            </form>
+            {/* </div> */}
           </div>
         </div>
       </nav>
