@@ -4,7 +4,6 @@ import { GeneralContext } from "../Context/context";
 
 export default function Navbar() {
   const {username, Logout,isAuthorized} = useContext(GeneralContext)
-  console.log(username)
   return (
       <nav className="navbar navbar-expand-lg border-bottom" style={{backgroundColor: "#FFF"}}>
         <div className="container p-2">
@@ -52,7 +51,7 @@ export default function Navbar() {
                   Support
                 </Link>
               </li>
-             {(isAuthorized && username) && <li className="nav-item nav-link" style={{textTransform:"capitalize"}}>
+             {isAuthorized && <li className="nav-item nav-link" style={{textTransform:"capitalize"}}>
                 {/* <Link className="nav-link active" to='/support'> */}
                   {username} 
                 {/* </Link> */}
