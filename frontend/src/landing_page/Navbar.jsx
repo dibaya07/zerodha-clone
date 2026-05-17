@@ -4,6 +4,7 @@ import { GeneralContext } from "../Context/context";
 
 export default function Navbar() {
   const {username, Logout,isAuthorized} = useContext(GeneralContext)
+  console.log(username)
   return (
       <nav className="navbar navbar-expand-lg border-bottom" style={{backgroundColor: "#FFF"}}>
         <div className="container p-2">
