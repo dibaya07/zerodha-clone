@@ -6,7 +6,7 @@ module.exports.userVerification = (req, res) => {
   const token = req.cookies.token
   console.log("token",token)
   if (!token) {
-    console.log("didn't get token")
+    console.log("didn't get token");
     return res.json({ status: false })
   }
   jwt.verify(token, process.env.TOKEN_KEY, async (err, data) => {
