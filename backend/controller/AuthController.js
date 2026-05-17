@@ -16,6 +16,7 @@ module.exports.Signup = async (req, res, next) => {
       secure: process.env.NODE_ENV === "production",
       sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
       httpOnly: true,
+      maxAge: 7 * 24 * 60 * 60 * 1000,
     });
     res
       .status(201)
@@ -48,6 +49,7 @@ module.exports.Login = async (req, res, next) => {
         secure: process.env.NODE_ENV === "production",
       sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
       httpOnly: true,
+      maxAge: 7 * 24 * 60 * 60 * 1000,
      });
      res.status(201).json({ message: "User logged in successfully", success: true });
      next()
