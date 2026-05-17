@@ -12,8 +12,10 @@ module.exports.Signup = async (req, res, next) => {
     const user = await User.create({ email, password, username, createdAt });
     const token = createSecretToken(user._id);
     res.cookie("token", token, {
-      withCredentials: true,
-      httpOnly: false,
+      // withCredentials: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+      httpOnly: true,
     });
     res
       .status(201)
@@ -43,8 +45,9 @@ module.exports.Login = async (req, res, next) => {
     //  console.log(token)
 
      res.cookie("token", token, {
-       withCredentials: true,
-       httpOnly: false,
+        secure: process.env.NODE_ENV === "production",
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+      httpOnly: true,
      });
      res.status(201).json({ message: "User logged in successfully", success: true });
      next()
