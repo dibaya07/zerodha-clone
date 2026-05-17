@@ -53,7 +53,7 @@ export default function Navbar() {
               </li>
              {isAuthorized && <li className="nav-item nav-link" style={{textTransform:"capitalize"}}>
                 {/* <Link className="nav-link active" to='/support'> */}
-                  hello {username}
+                  {username}
                 {/* </Link> */}
               </li>}
               {!isAuthorized && <li className="nav-item">
